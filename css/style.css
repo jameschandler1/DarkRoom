@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+@media screen and (min-height: 600px) {
+    
+
+}
+
+#theKey {
+    mix-blend-mode: normal;
+    opacity: 90%;
+    
+}
+#theDoor {
+ mix-blend-mode: normal;
+}
+
+#theDemons {
+    mix-blend-mode: screen;
+}
+
+body {
+    background-color: rgb(45, 13, 13);
+
+    height: auto;
+}
+
+#container {
+    /* background-image: url('https://i.makeagif.com/media/3-03-2014/2FBkOY.gif'); */
+    background-color: rgb(21, 5, 5);
+    height: 75vh;
+    display: grid;
+    grid-template-columns: .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr ;
+    border: 2px solid rgb(0, 0, 0);
+    mix-blend-mode: color-burn;
+}
+
+.key-location {
+    /* background-color: rgb(45, 13, 13); */
+    border: none;
+    height: fit-content;
+    width: fit-content;
+}
+
+:root {
+    cursor: crosshair;
+    --cursorX: 50vw;
+    --cursorY: 50vh;
+  }
+  :root:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    background: radial-gradient(
+      circle 15vmax at var(--cursorX) var(--cursorY),
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,.95) 90%,
+      rgba(0,0,0, .99) 100%
+    )
+  }
+
+#top-bar {
+    display: flex;
+    justify-content: left;
+}
+
+.top-content {
+    display: flex;
+    position: relative;
+    font-family: 'Julius Sans One', sans-serif;
+    color: transparent;
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: rgb(203, 12, 12);
+    background-color: transparent;
+}
+
+
+#Timer {
+    font-family: 'Julius Sans One', sans-serif;
+    color: transparent;
+    font-size: 15px;
+    -webkit-text-stroke-width: .4px;
+    -webkit-text-stroke-color: rgb(255, 0, 0);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    position: relative;
+    bottom: -.4em;
+    margin: auto 0;
+}
+
+#inventory {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: solid 1px rgb(116, 0, 0);
+    height: 2.1rem;
+    width: 20rem;
+    position: relative;
+    top: 2.5vh;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+h5 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: transparent;
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: rgb(203, 12, 12);
+    display: flex;
+    justify-content: left;
+}
+
+#title-timer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+ 
+#bag {
+    position: relative;
+
+}
+
+
+
+#theme {
+    background-color: aqua;
+}
+
+.jconfirm.jconfirm-my-theme .jconfirm-bg{
+    background-image: url('https://i.pinimg.com/originals/8e/07/18/8e071836dc5d3f534138455fda54cc68.gif');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box{
+    height: 130x;
+    width: 340px;
+    background-color: rgba(220, 20, 23, 0.603);
+    font-size: 30px;
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box.loading{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box.loading:before{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box.loading:after{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-closeIcon{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-title-c{
+    font-family: 'Julius Sans One', sans-serif;
+          
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-content-pane{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-content{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-buttons{
+    
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-buttons button{
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.413);
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+:active.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-buttons button{
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgb(181, 38, 7);
+    background-color: rgba(101, 6, 24, 0.413);
+    border-radius: .2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#buttn{
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgb(181, 38, 7);
+    background-color: rgba(101, 6, 24, 0.413);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    border: none;
+}
