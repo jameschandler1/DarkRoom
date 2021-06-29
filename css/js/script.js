@@ -30,9 +30,6 @@ function update(e){
 
   let timerId; 
 
-
- 
-
   const darkRoomTheme = document.getElementById('play');
 
   const playBttn = document.getElementById('buttn');
@@ -48,39 +45,7 @@ function update(e){
       this.dataset.playing = 'false';
     }
    }, false);
-
-  function death() {
-    $.alert({
-      theme:'my-theme',
-      title: `Game Over!`,
-      content: `You've been slain by a demon.`,
-      buttons: {
-        restart: {
-          btnClass: 'btn-transparent',
-          action: resetGame(),
-        }
-      }
-    })
-}
-
-$('#theKey').hover(function (e){
-  console.log(e)
-  if (e.target.className !== 'theDemons') {
-  $.alert({
-    theme:'my-theme',
-    title: `Game Over!`,
-    content: `You've been slain by a demon.`,
-    buttons: {
-      restart: {
-        btnClass: 'btn-transparent',
-        action: resetGame(),
-      }
-    }
-  })
-  }
-})
-
-  
+ 
    //opening message
   function playAlert() {
         $.confirm({
@@ -109,7 +74,7 @@ $('#theKey').hover(function (e){
                 } else {
                   timerId = setTimeout(countdown, 1000);
                   timer.html(timeLeft + ' seconds remaining');
-                  timeLeft-- ;
+                  timeLeft--;
                 }
 
               },
@@ -140,10 +105,9 @@ function spawnDoor() {
 function spawnMonster() {
   let randomThree = Math.floor(Math.random()* $('.key-location').length) + 1;
   let randomFour = Math.floor(Math.random()* $('.key-location').length) + 1;
-  // let randomFive = Math.floor(Math.random()* $('.key-location').length) + 1;
   $('.key-location').eq(randomThree).append('<img src="'  + demonImage +  '" width="30" height="30" class="theDemons"/>')
   $('.key-location').eq(randomFour).append('<img src="'  + demonImage +  '" width="30" height="30" class="theDemons"/>')
-  // $('.key-location').eq(randomFive).append('<img src="'  + demonImage +  '" width="40" height="40" id="theDemons"/>')
+
 }
 
 //click event on the container of the game
@@ -182,7 +146,6 @@ $('#container').on('click', function(e){
     e.target.remove();
     spawnMonster();
     spawnKey();
-    
     return;
   }
 
@@ -210,8 +173,6 @@ $('#container').mouseover(function (e){
 function resetGame() {
     $('#inventory').children().remove();
     timeLeft = 60;
-    timeLeft--;
-    playAlert();
     $('.key-location').html('');
     spawnKey();
 }
