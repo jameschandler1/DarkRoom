@@ -29,10 +29,5 @@ technologies that were used to create this game include:
         -hitting play starts timer and allows user to engage with the gameboard which was placed with the playAlert message
         -upon losing or dying the user is prompted with either one of two messages both of which allow the user to click a button to restart game.
     5. css was then implemented to include a flashlight effect, additional styling on nearly all aspects of the page to give the game a personal and terrifying feel.
-    6. music was added and a button in the left hand corner below the title allows users to toggle sound (ps. i made the music myself so please try it out!)
-
-    Unsolved Issues:
-        - I believe there is only one for some reason only occasionally the timer will go down in increments of two instead of one.
-            -this problem can effect gameplay by reducing time limit during play state.
-
-            a
+    6. music was added and a button in the left hand corner below the title allows users to toggle sound (ps. i made the music myself so please try it out!
+    
