@@ -46,6 +46,17 @@ playBttn.addEventListener('click', function() {
  }
 }, false);
 
+
+
+function resetGame() {
+  timeLeft = 60;
+  $('#inventory').children().remove();
+  $('.key-location').html('');
+  spawnKey();
+ }
+
+
+
 //opening message
 function playAlert() {
      $.confirm({
@@ -58,27 +69,34 @@ function playAlert() {
            btnClass: 'btn-warning',
            //hitting enter on play screen or clicking play starts timer and game 
            action: function countdown() {
-             if (timeLeft === -1) {
-               clearTimeout(timerId);
-               $.alert({
-                 theme:'my-theme',
-                 title: `Game Over!`,
-                 content: `You've failed to escape in time.`,
-                 buttons: {
-                   restart: {
-                     key: ['enter'],
-                     btnClass: 'btn-transparent',
-                     action: resetGame(),
-                   }
-                 }
-               })
-             } else {
-               timerId = setTimeout(countdown, 1000);
-               timer.html(timeLeft + ' seconds remaining');
-               timeLeft--;
-             }
-
-           },
+            if (timeLeft === -1) {
+              // clearTimeout(timerId);
+              $.confirm({
+                theme:'my-theme',
+                title: `Game Over!`,
+                content: `You've failed to escape in time.`,
+                buttons: {
+                  restart: {
+                    key: ['enter'],
+                    btnClass: 'btn-transparent',
+                    action: 
+                    function resetGameWin() {
+                      timeLeft = 60;
+                      timerId = setTimeout(countdown, 1000)
+                      $('#inventory').children().remove();
+                      $('.key-location').html('');
+                      spawnKey();
+                     },
+                  }
+                }
+              })
+            } else {
+              timerId = setTimeout(countdown, 1000);
+              timer.html(timeLeft + ' seconds remaining');
+              timeLeft--;
+            }
+          },
+  
          },
      }
  })
@@ -157,7 +175,6 @@ if (e.target.id === 'theDoor') {
 $('#container').mouseover(function (e){
 e.preventDefault();
 e.stopPropagation();
-console.log(e)
 if (e.target.className === 'theDemons') {
 $.alert({
  theme:'my-theme',
@@ -173,9 +190,4 @@ $.alert({
 }
 })
 
-function resetGame() {
-  $('#inventory').children().remove();
-  $('.key-location').html('');
-  spawnKey();
-  timeLeft = 60;
- }
+
