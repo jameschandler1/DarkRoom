@@ -246,7 +246,3 @@ $('#off').on('click', resetGame)
 
 console.log(spawnRando)
 
-// console.log(hellTimer);
-// function hellMode() {
-//   $('.key-location').eq(randomSix).append('<img src="'  + demonImage +  '" width="40" height="40" class="theDemons"/>')
-// }
