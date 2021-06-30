@@ -30,4 +30,6 @@ technologies that were used to create this game include:
         -upon losing or dying the user is prompted with either one of two messages both of which allow the user to click a button to restart game.
     5. css was then implemented to include a flashlight effect, additional styling on nearly all aspects of the page to give the game a personal and terrifying feel.
     6. music was added and a button in the left hand corner below the title allows users to toggle sound (ps. i made the music myself so please try it out!
+
+    url: https://jameschandler1.github.io/DarkRoom/
     
