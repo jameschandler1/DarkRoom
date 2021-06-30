@@ -16,12 +16,10 @@
 
 body {
     background-color: rgb(133, 0, 0);
-
     height: auto;
 }
 
 #container {
-    /* background-image: url('https://i.makeagif.com/media/3-03-2014/2FBkOY.gif'); */
     background-color: rgb(101, 0, 0);
     height: 75vh;
     display: grid;
@@ -30,7 +28,6 @@ body {
 }
 
 .key-location {
-    /* background-color: rgb(45, 13, 13); */
     border: none;
     height: fit-content;
     width: fit-content;
@@ -41,7 +38,8 @@ body {
     --cursorX: 50vw;
     --cursorY: 50vh;
   }
-  :root:before {
+
+:root:before {
     content: '';
     display: block;
     width: 100%;
@@ -71,7 +69,6 @@ body {
     background-color: transparent;
 }
 
-
 #Timer {
     font-family: 'Julius Sans One', sans-serif;
     color: transparent;
@@ -87,8 +84,6 @@ body {
     bottom: -.4em;
     margin: auto 0;
 }
-
-
 
 #inventory {
     display: flex;
@@ -123,10 +118,7 @@ h5 {
  
 #bag {
     position: relative;
-
 }
-
-
 
 #theme {
     background-color: aqua;
