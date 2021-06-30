@@ -14,8 +14,8 @@ function update(e){
  document.documentElement.style.setProperty('--cursorY', y + 'px')
 }
 
-$('#container').on('mousemove',update)
-$('#container').on('touchmove',update)
+$('#container').on('mousemove', update)
+$('#container').on('touchmove', update)
 
 
 let keyImage = ["https://previews.123rf.com/images/piren/piren1703/piren170301299/74444961-the-key-icon-on-a-black-background-.jpg"];

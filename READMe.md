@@ -33,3 +33,4 @@ technologies that were used to create this game include:
 
     url: https://jameschandler1.github.io/DarkRoom/
     
+    extra - clicking hellmode on button spaws new demons at random locations at intervals of 4s.   
