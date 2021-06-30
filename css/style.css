@@ -177,7 +177,7 @@ h5 {
 
 #on {
     position: absolute;
-    right: 3.4rem;
+    right: 3.6rem;
     bottom: 91.5vh;
 }
 #on:active {
@@ -190,7 +190,7 @@ h5 {
     bottom: 91.5vh;
 }
 #off:active {
-    background-color: rgb(148, 2, 0);
+    background-color: rgb(255, 214, 50);
 }
 
 #unmute {
