@@ -33,7 +33,7 @@ body {
     width: fit-content;
 }
 
-:root {
+/* :root {
     cursor: crosshair;
     --cursorX: 50vw;
     --cursorY: 50vh;
@@ -52,7 +52,7 @@ body {
       rgba(0,0,0,.95) 90%,
       rgba(0,0,0, .99) 100%
     )
-  }
+  } */
 
 #top-bar {
     display: flex;
@@ -168,15 +168,66 @@ h5 {
     position: relative;
 }
 
-#buttn{
+.buttn{
     font-family: 'Julius Sans One', sans-serif;
     color: rgb(181, 38, 7);
     background-color: rgba(101, 6, 24, 0.413);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     border-radius: 10px;
     border: none;
 }
 
+#on {
+    position: absolute;
+    right: 3.4rem;
+    bottom: 91.5vh;
+}
+#on:active {
+    background-color: rgb(148, 2, 0);
+}
+
+#off {
+    position: absolute;
+    right: .6rem;
+    bottom: 91.5vh;
+}
+#off:active {
+    background-color: rgb(148, 2, 0);
+}
+
+#unmute {
+    position: absolute;
+    bottom: 91.5vh;
+    left: .8em;
+}
+#unmute:active {
+    background-color: rgb(148, 2, 0);
+}
+
+#helltag {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 2vh;
+    right: .9em;
+}
+
+.glow {
+    animation: glow 3s infinite;
+}
+
+@keyframes glow {
+    from{
+    /*what you want to happen at start*/
+        text-emphasis-style: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(181, 38, 7), 0 0 30px rgb(150, 0, 0), 0 0 40px rgb(135, 0, 0), 0 0 50px rgb(255, 48, 48), 0 0 60px rgb(255, 48, 48), 0 0 70px rgb(255, 48, 48);
+    }
+    to {
+        text-emphasis-color: 0 0 10px rgb(255, 183, 0), 0 0 20px rgba(247, 204, 63, 0.92), 0 0 30px rgb(255, 217, 64), 0 0 40px rgb(176, 139, 46), 0 0 50px rgb(255, 48, 48), 0 0 60px rgb(255, 48, 48), 0 0 70px rgb(255, 48, 48);
+    }
+}
+
+#theDemons{
+    position: absolute;
+}

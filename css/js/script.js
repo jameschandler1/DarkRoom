@@ -32,11 +32,10 @@ let timerId;
 
 const darkRoomTheme = document.getElementById('play');
 
-const playBttn = document.getElementById('buttn');
+const playBttn = document.querySelector('.buttn');
 
 //allows users to toggle sound
 playBttn.addEventListener('click', function() {
- 
  if (this.dataset.playing === 'false') {
    darkRoomTheme.play();
    this.dataset.playing = 'true';
@@ -53,6 +52,7 @@ function resetGame() {
   $('#inventory').children().remove();
   $('.key-location').html('');
   spawnKey();
+  clearInterval(spawnRando);
  }
 
 
@@ -77,7 +77,7 @@ function playAlert() {
                 content: `You've failed to escape in time.`,
                 buttons: {
                   restart: {
-                    key: ['enter'],
+                    keys: ['enter'],
                     btnClass: 'btn-transparent',
                     action: 
                     //reset for within here because of scope issues
@@ -194,3 +194,50 @@ $.alert({
 })
 
 
+
+
+let randomFive = Math.floor(Math.random()* $('.key-location').length) + 1;
+let randomSix = Math.floor(Math.random()* $('.key-location').length) + 1;
+
+let spawnRando;
+
+function spawn() {
+  if (timeLeft !== -1) {
+    spawnRando = setInterval(spawnMonster, 4000)
+  } else if (timeLeft === -1) {
+    clearInterval(spawnRando);
+    $.confirm({
+      theme:'my-theme',
+      title: `Game Over!`,
+      content: `You've failed to escape in time.`,
+      buttons: {
+        restart: {
+          key: ['enter'],
+          btnClass: 'btn-transparent',
+          action: 
+          //reset for within here because of scope issues
+          function resetGameWin() {
+            timeLeft = 60;
+            timerId = setTimeout(countdown, 1000)
+            $('#inventory').children().remove();
+            $('.key-location').html('');
+            spawnKey();
+           },
+        }
+      }
+    })
+  }
+}
+
+
+
+
+$('#on').on('click', spawn);
+$('#off').on('click', resetGame)
+
+console.log(spawnRando)
+
+// console.log(hellTimer);
+// function hellMode() {
+//   $('.key-location').eq(randomSix).append('<img src="'  + demonImage +  '" width="40" height="40" class="theDemons"/>')
+// }
