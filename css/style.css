@@ -33,7 +33,7 @@ body {
     width: fit-content;
 }
 
-/* :root {
+:root {
     cursor: crosshair;
     --cursorX: 50vw;
     --cursorY: 50vh;
@@ -52,7 +52,7 @@ body {
       rgba(0,0,0,.95) 90%,
       rgba(0,0,0, .99) 100%
     )
-  } */
+  }
 
 #top-bar {
     display: flex;
