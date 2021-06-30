@@ -47,7 +47,7 @@ playBttn.addEventListener('click', function() {
 }, false);
 
 
-
+//resets game state
 function resetGame() {
   timeLeft = 60;
   $('#inventory').children().remove();
@@ -80,6 +80,7 @@ function playAlert() {
                     key: ['enter'],
                     btnClass: 'btn-transparent',
                     action: 
+                    //reset for within here because of scope issues
                     function resetGameWin() {
                       timeLeft = 60;
                       timerId = setTimeout(countdown, 1000)
@@ -91,6 +92,7 @@ function playAlert() {
                 }
               })
             } else {
+              //sets timer countdown
               timerId = setTimeout(countdown, 1000);
               timer.html(timeLeft + ' seconds remaining');
               timeLeft--;
