@@ -146,7 +146,7 @@ if ($('#inventory').children().length === 6) {
      theme: 'my-theme',
      buttons: {
        play: {
-        key: 'enter',
+        key: ['enter'],
         btnClass: 'btn-transparent',
         action: resetGame(),
        }
@@ -184,6 +184,7 @@ $.alert({
  content: `You've been slain by a demon.`,
  buttons: {
    restart: {
+    key:['enter'],
      btnClass: 'btn-transparent',
      action: resetGame(),
    }
