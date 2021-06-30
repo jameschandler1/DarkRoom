@@ -177,20 +177,29 @@ if (e.target.id === 'theDoor') {
 $('#container').mouseover(function (e){
 e.preventDefault();
 e.stopPropagation();
-if (e.target.className === 'theDemons') {
-$.alert({
- theme:'my-theme',
- title: `Game Over!`,
- content: `You've been slain by a demon.`,
- buttons: {
-   restart: {
-    key:['enter'],
-     btnClass: 'btn-transparent',
-     action: resetGame(),
-   }
- }
-})
-}
+    if (e.target.className === 'theDemons') {
+      $.alert({
+      theme:'my-theme',
+      title: `Game Over!`,
+      content: `You've been slain by a demon.`,
+      buttons: {
+        restart: {
+          key:['enter'],
+          btnClass: 'btn-transparent',
+          action: function resetGameWin() {
+            timeLeft = 60;
+            timerId = setTimeout(function(){
+            timer.html(timeLeft + ' seconds remaining');
+            timeLeft--;
+            }, 1000)
+            $('#inventory').children().remove();
+            $('.key-location').html('');
+            spawnKey();
+          }
+        }
+      }
+    })
+  }
 })
 
 
