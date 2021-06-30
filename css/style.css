@@ -10,10 +10,6 @@
     opacity: 80%
 }
 
-#theDemons {
-    mix-blend-mode: lighten;
-}
-
 body {
     background-color: rgb(133, 0, 0);
     height: auto;
