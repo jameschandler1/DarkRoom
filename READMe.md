@@ -13,8 +13,8 @@ this process repeats until the users finds all keys.
 
 6.) winning the game means the users finds all keys and unlock all doors within the alotted time and does not die to a demon (which are spawned upon entering a new room) upon winning the player is prompted with a message that displays the time remaining and that they have escaped.
 
-7.) losing means that the users was killed by a demon, upon death the user is prompted with a message displying they were killed and allows the player to restart.
-
+7.) losing means that the users was killed by a demon or time runs out, upon death the user is prompted with a message displying they were killed and allows the player to restart.
+    or player prompted with a seperate message stating they did not make it out in time.
 technologies that were used to create this game include:
     -javascript
     -jquery
