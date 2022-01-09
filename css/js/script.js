@@ -27,7 +27,13 @@ function update(e){
 
   let demonImage = ["https://64.media.tumblr.com/98c5635217d3d6a0c5b8452f9ea45562/tumblr_n2457rW6zc1s335jfo1_r2_500.gifv"]
 
-  let timeLeft = 60;
+  let timeLeft;
+
+  if (window.screen.width <= 500) {
+    timeLeft = 40;
+  } else if (window.screen.width > 500) {
+    timeLeft = 60;
+  }
 
   let timer = $('#Timer');
 
