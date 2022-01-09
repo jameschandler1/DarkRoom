@@ -1,41 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 @media screen and (min-height: 600px) {
-    
-
+    #theKey {
+        width: 20px;
+        height: 20px;
+    }  
+    #theDoor {
+        width: 25px;
+        height: 25px;
+    } 
+    #theDemons {
+        width: 30px;
+        height: 30px;
+    }
 }
 
+
 #theKey {
-   mix-blend-mode: color-dodge;
-    opacity: 80%
+    mix-blend-mode: normal;   
+}
+
+#theDoor {
+ mix-blend-mode: normal;
+}
+
+#theDemons {
+    mix-blend-mode: normal;
 }
 
 body {
-    background-color: rgb(133, 0, 0);
+    background-color: rgb(45, 13, 13);
     height: auto;
+    width: auto;
 }
 
 #container {
-    background-color: rgb(101, 0, 0);
+    /* background-image: url('https://i.makeagif.com/media/3-03-2014/2FBkOY.gif'); */
+    background-color: rgb(21, 5, 5);
     height: 75vh;
     display: grid;
-    grid-template-columns: .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr ;
-    border: 2px solid rgb(150, 0, 0);   
+    grid-template-columns: .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr;
+    border: 2px solid rgb(0, 0, 0);
+    mix-blend-mode: normal;
 }
 
 .key-location {
+    /* background-color: rgb(45, 13, 13); */
     border: none;
     height: fit-content;
     width: fit-content;
 }
 
 :root {
+    z-index: 1;
     cursor: crosshair;
     --cursorX: 50vw;
     --cursorY: 50vh;
   }
-
-:root:before {
+  :root:before {
+    z-index: 0;
     content: '';
     display: block;
     width: 100%;
@@ -43,16 +66,30 @@ body {
     position: fixed;
     pointer-events: none;
     background: radial-gradient(
-      circle 10vmax at var(--cursorX) var(--cursorY),
-      rgba(0,0,0,.1) 0%,
+      circle 15vmax at var(--cursorX) var(--cursorY),
+      rgba(0,0,0,0) 0%,
       rgba(0,0,0,.95) 90%,
       rgba(0,0,0, .99) 100%
     )
   }
 
+
+@media screen and (min-height: 600px) {
+   background: radial-gradient(
+      circle 12vmax at var(--cursorX) var(--cursorY),
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,.95) 90%,
+      rgba(0,0,0, .99) 100%
+    )
+   
+}
+
 #top-bar {
     display: flex;
+    width: 100%;
+    height: auto;
     justify-content: left;
+    z-index: 1
 }
 
 .top-content {
@@ -65,32 +102,38 @@ body {
     background-color: transparent;
 }
 
+@media  screen and (max-width: 600px) {
+    #Timer {
+        font-size: .8rem;
+    }
+    
+}
+
 #Timer {
     font-family: 'Julius Sans One', sans-serif;
     color: transparent;
-    font-size: 15px;
     -webkit-text-stroke-width: .4px;
     -webkit-text-stroke-color: rgb(255, 0, 0);
     background-color: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    width: 200px;
+    width: 100%;
     position: relative;
-    bottom: -.4em;
-    margin: auto 0;
+    bottom: -.4rem;
+    margin: 1rem auto;
 }
 
 #inventory {
     display: flex;
     justify-content: left;
     align-items: center;
-    border: solid 1px rgb(128, 14, 14);
+    border: solid 1px rgb(116, 0, 0);
     height: 2.1rem;
     width: 20rem;
     position: relative;
     top: 2.5vh;
-    background-color: rgba(131, 1, 1, 0.596);
+    background-color: rgba(0, 0, 0, 0.596);
 }
 
 h5 {
@@ -100,9 +143,6 @@ h5 {
     -webkit-text-stroke-color: rgb(203, 12, 12);
     display: flex;
     justify-content: left;
-    position: relative;
-    top: 1vh;
-
 }
 
 #title-timer {
@@ -114,7 +154,10 @@ h5 {
  
 #bag {
     position: relative;
+
 }
+
+
 
 #theme {
     background-color: aqua;
@@ -127,12 +170,19 @@ h5 {
     background-color: black;
 }
 .jconfirm.jconfirm-my-theme .jconfirm-box{
-    height: 130x;
-    width: 340px;
+    height: 10rem;
+    width: 20rem;
     background-color: rgba(220, 20, 23, 0.603);
     font-size: 30px;
 }
-
+.jconfirm.jconfirm-my-theme .jconfirm-box.loading{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box.loading:before{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box.loading:after{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-closeIcon{
+}
 .jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-title-c{
     font-family: 'Julius Sans One', sans-serif;
           
@@ -142,7 +192,11 @@ h5 {
     font-size: 10px;
     color: rgb(0, 0, 0);
 }
-
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-content{
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-buttons{
+    
+}
 .jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-buttons button{
     font-family: 'Julius Sans One', sans-serif;
     color: rgb(0, 0, 0);
@@ -164,66 +218,14 @@ h5 {
     position: relative;
 }
 
-.buttn{
+#buttn{
     font-family: 'Julius Sans One', sans-serif;
     color: rgb(181, 38, 7);
     background-color: rgba(101, 6, 24, 0.413);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     border-radius: 10px;
     border: none;
-}
-
-#on {
-    position: absolute;
-    right: 3.6rem;
-    bottom: 91.5vh;
-}
-#on:active {
-    background-color: rgb(148, 2, 0);
-}
-
-#off {
-    position: absolute;
-    right: .6rem;
-    bottom: 91.5vh;
-}
-#off:active {
-    background-color: rgb(255, 214, 50);
-}
-
-#unmute {
-    position: absolute;
-    bottom: 91.5vh;
-    left: .8em;
-}
-#unmute:active {
-    background-color: rgb(148, 2, 0);
-}
-
-#helltag {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 2vh;
-    right: .9em;
-}
-
-.glow {
-    animation: glow 3s infinite;
-}
-
-@keyframes glow {
-    from{
-    /*what you want to happen at start*/
-        text-emphasis-style: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(181, 38, 7), 0 0 30px rgb(150, 0, 0), 0 0 40px rgb(135, 0, 0), 0 0 50px rgb(255, 48, 48), 0 0 60px rgb(255, 48, 48), 0 0 70px rgb(255, 48, 48);
-    }
-    to {
-        text-emphasis-color: 0 0 10px rgb(255, 183, 0), 0 0 20px rgba(247, 204, 63, 0.92), 0 0 30px rgb(255, 217, 64), 0 0 40px rgb(176, 139, 46), 0 0 50px rgb(255, 48, 48), 0 0 60px rgb(255, 48, 48), 0 0 70px rgb(255, 48, 48);
-    }
-}
-
-#theDemons{
-    position: absolute;
 }

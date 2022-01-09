@@ -13,8 +13,8 @@ this process repeats until the users finds all keys.
 
 6.) winning the game means the users finds all keys and unlock all doors within the alotted time and does not die to a demon (which are spawned upon entering a new room) upon winning the player is prompted with a message that displays the time remaining and that they have escaped.
 
-7.) losing means that the users was killed by a demon or time runs out, upon death the user is prompted with a message displying they were killed and allows the player to restart.
-    or player prompted with a seperate message stating they did not make it out in time.
+7.) losing means that the users was killed by a demon, upon death the user is prompted with a message displying they were killed and allows the player to restart.
+
 technologies that were used to create this game include:
     -javascript
     -jquery
@@ -29,9 +29,8 @@ technologies that were used to create this game include:
         -hitting play starts timer and allows user to engage with the gameboard which was placed with the playAlert message
         -upon losing or dying the user is prompted with either one of two messages both of which allow the user to click a button to restart game.
     5. css was then implemented to include a flashlight effect, additional styling on nearly all aspects of the page to give the game a personal and terrifying feel.
-    6. music was added and a button in the left hand corner below the title allows users to toggle sound (ps. i made the music myself so please try it out!
+    6. music was added and a button in the left hand corner below the title allows users to toggle sound (ps. i made the music myself so please try it out!)
 
-    url: https://jameschandler1.github.io/DarkRoom/
-    
-    extra - clicking hellmode on button spaws new demons at random locations at intervals of 4s.   
-            user must click reset button to exit hellmode.
+    Unsolved Issues:
+        - I believe there is only one for some reason only occasionally the timer will go down in increments of two instead of one.
+            -this problem can effect gameplay by reducing time limit during play state.
