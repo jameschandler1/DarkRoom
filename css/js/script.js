@@ -13,13 +13,13 @@ function update(e){
   
       document.documentElement.style.setProperty("--cursorX", x + "px");
       document.documentElement.style.setProperty("--cursorY", y + "px");
-      document.documentElement.style.setProperty("passive", 'true');
+      $('#container').css('cursor', {passive: 'true'});
 
 }
   
   
   $('#container').on('mousemove', update)
-  $('#container').on('touchmove', update, {passive: true})
+  $('#container').on('touchstart', 'touchmove', 'touchend', update, {passive: true})
 
   let keyImage = ["https://previews.123rf.com/images/piren/piren1703/piren170301299/74444961-the-key-icon-on-a-black-background-.jpg"];
 
